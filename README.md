@@ -1,0 +1,1 @@
+*** Documentation of the proposal to fixing SMS vulnerabilities as pertaining to smishing practices ***

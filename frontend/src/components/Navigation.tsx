@@ -68,7 +68,7 @@ const Navigation: React.FC<NavProps> = () => {
 
             {/* dropdown 2 */}
             <NavDropdown
-              title='Wyzwania'
+              title='Analiza'
               drop={'down'}
               id={'dropdown-button-drop-left'}
             >

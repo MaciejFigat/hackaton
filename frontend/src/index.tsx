@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { store } from './app/store'
 import { BrowserRouter as Router } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
+import 'devices.css'
 
 ReactDOM.render(
   <Provider store={store}>
