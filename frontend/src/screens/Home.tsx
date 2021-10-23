@@ -1,8 +1,8 @@
 import React from 'react'
 import CardComponent from '../components/CardComponent'
 import { LinkContainer } from 'react-router-bootstrap'
-import SectionCode from '../components/SectionCode'
-import { codeExampleOne } from '../codeSnippets/codeOne'
+// import SectionCode from '../components/SectionCode'
+// import { codeExampleOne } from '../codeSnippets/codeOne'
 
 interface HomeProps {}
 
