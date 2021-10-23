@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MockupMobile from '../components/MockupMobile'
 import axios from 'axios'
 import { Button, Form, Container, Row, Col } from 'react-bootstrap'
-import CardComponent from '../components/CardComponent'
+
 interface SolutionsProps {}
 
 interface ResponseBody {
