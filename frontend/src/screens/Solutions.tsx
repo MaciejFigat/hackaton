@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import MockupMobile from '../components/MockupMobile'
 import axios from 'axios'
-import { Card, Button, Form, Container, Row, Col } from 'react-bootstrap'
+import { Button, Form, Container, Row, Col } from 'react-bootstrap'
 interface SolutionsProps {}
 interface ResponseBody {
   sms?: any
