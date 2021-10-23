@@ -32,7 +32,7 @@ const CardComponent: React.FC<CardComponentProps> = ({
         <Card.Text>{description}</Card.Text>
         <Button
           variant={variantButton}
-          style={{ position: 'absolute', bottom: '1rem' }}
+          style={{ position: 'absolute', bottom: '0.75rem' }}
         >
           <a href={link}>{linkDescription}</a>
         </Button>
