@@ -68,7 +68,7 @@ const Navigation: React.FC<NavProps> = () => {
 
             {/* dropdown 2 */}
             <NavDropdown
-              title='Analiza'
+              title='Kod'
               drop={'down'}
               id={'dropdown-button-drop-left'}
             >
@@ -79,7 +79,7 @@ const Navigation: React.FC<NavProps> = () => {
                   to='/about/#partOne'
                   activeClassName='selected'
                 >
-                  1
+                  Przykład architektury
                 </NavHashLink>
               </NavDropdown.Item>
               <NavDropdown.Item as='button'>
@@ -89,7 +89,17 @@ const Navigation: React.FC<NavProps> = () => {
                   to='/about/#partTwo'
                   activeClassName='selected'
                 >
-                  2
+                  Przykład architektury 2
+                </NavHashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item as='button'>
+                {' '}
+                <NavHashLink
+                  smooth
+                  to='/about/#partThree'
+                  activeClassName='selected'
+                >
+                  Przykład architektury 3
                 </NavHashLink>
               </NavDropdown.Item>
             </NavDropdown>
@@ -107,7 +117,7 @@ const Navigation: React.FC<NavProps> = () => {
                   to={'/solutions#partOne'}
                   activeClassName='selected'
                 >
-                  1
+                  Przykład rozwiązania 1
                 </NavHashLink>
               </NavDropdown.Item>
               <NavDropdown.Item as='button'>
@@ -116,7 +126,7 @@ const Navigation: React.FC<NavProps> = () => {
                   to={'/solutions#partOne'}
                   activeClassName='selected'
                 >
-                  2
+                  Przykład rozwiązania 2
                 </NavHashLink>
               </NavDropdown.Item>
               <NavDropdown.Item as='button'>
@@ -125,7 +135,7 @@ const Navigation: React.FC<NavProps> = () => {
                   to={'/solutions#partOne'}
                   activeClassName='selected'
                 >
-                  3
+                  Przykład rozwiązania 3
                 </NavHashLink>
               </NavDropdown.Item>
             </NavDropdown>

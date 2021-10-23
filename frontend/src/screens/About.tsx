@@ -6,15 +6,29 @@ interface AboutProps {}
 const About: React.FC<AboutProps> = () => {
   return (
     <>
-      <section className='partOne'>
-        <SectionCode
-          sectionID='partOne'
-          title='przykład nr 1'
-          version='secondary'
-          description='sample code'
-          codeExample={codeExampleOne}
-        />
-      </section>
+      <SectionCode
+        sectionID='partOne'
+        title='przykład nr 1'
+        version='danger'
+        description='sample code'
+        codeExample={codeExampleOne}
+      />
+
+      <SectionCode
+        sectionID='partTwo'
+        title='przykład nr 2'
+        version='secondary'
+        description='sample code'
+        codeExample={codeExampleOne}
+      />
+
+      <SectionCode
+        sectionID='partThree'
+        title='przykład nr 3'
+        version='info'
+        description='sample code'
+        codeExample={codeExampleOne}
+      />
     </>
   )
 }
