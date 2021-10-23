@@ -14,7 +14,6 @@ interface ResponseBody {
   status?: any
   link?: any
   statusText?: any
-  // data?: any
 }
 
 const Solutions: React.FC<SolutionsProps> = () => {
@@ -79,6 +78,15 @@ const Solutions: React.FC<SolutionsProps> = () => {
                     <div className='mt-5 text-danger'>
                       Wynik analizy:{' '}
                       {fetchedData.data && fetchedData.data.status}
+                    </div>
+                  )}
+                  {fetchedData.data && (
+                    <div className='mt-5'>
+                      Proponujemy byś przeczytał:
+                      <a href={fetchedData.data.link} className='text-info'>
+                        {' '}
+                        link jak będzie działał.
+                      </a>
                     </div>
                   )}
                 </>
