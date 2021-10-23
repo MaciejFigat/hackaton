@@ -26,7 +26,9 @@ const Solutions: React.FC<SolutionsProps> = () => {
     console.log(data)
   }
 
-  const [textMessage, setTextMessage] = useState<string>('')
+  const [textMessage, setTextMessage] = useState<string>(
+    'Hello Friend, My name is Prince Nassid! I have good news for You! ... Just follow the link so we can talk about the money http://yourbankaccountismine.co'
+  )
   const [fetchedData, setFetchedData] = useState<ResponseBody>({
     status: 'za mało danych',
   })
@@ -53,6 +55,7 @@ const Solutions: React.FC<SolutionsProps> = () => {
                       <Form.Control
                         as='textarea'
                         rows={9}
+                        placeholder='Hello Friend, My name is Prince Nassid! I have good news for You! ... Just follow the link so we can talk about the money http://yourbankaccountismine.co'
                         onChange={(e: any) => setTextMessage(e.target.value)}
                       />
                     </Form.Group>
