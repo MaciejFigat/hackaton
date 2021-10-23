@@ -63,30 +63,13 @@ const Home: React.FC<HomeProps> = () => {
           </div>
         </div>
       </section>
-      <section className='partTwo'>
-        <SectionCode
-          sectionID='partOne'
-          title='przykład nr 1'
-          version='secondary'
-          description='sample code'
-          codeExample={codeExampleOne}
-        />
-      </section>
+
       <section
         id='partThree'
         className='bg-dark text-light p-3 p-lg-0 pt-lg-5 text-center text-sm-start'
       >
         <div className='container'>
           <div className='d-sm-flex align-items-center justify-content-between'>
-            <CardComponent
-              variantCard='dark'
-              title='Przeciwdziałanie obojętności'
-              description='Strach przed oszustwem, błędne praktyki i zaniedbania powodują wzrastającą obojętność klienta.'
-              link=''
-              linkDescription='Więcej info'
-              variantButton='warning'
-            />
-
             <div>
               <h2>
                 <LinkContainer to={'/snippets'}>
@@ -115,5 +98,16 @@ description='Korzystne będzie budowanie wzajemnego zaufania.'
 link=''
 linkDescription='Więcej info'
 variantButton='danger'
+/> */
+}
+
+{
+  /* <CardComponent
+variantCard='dark'
+title='Przeciwdziałanie obojętności'
+description='Strach przed oszustwem, błędne praktyki i zaniedbania powodują wzrastającą obojętność klienta.'
+link=''
+linkDescription='Więcej info'
+variantButton='warning'
 /> */
 }
