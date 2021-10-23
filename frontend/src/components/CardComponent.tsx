@@ -3,8 +3,8 @@ import { Card, Button } from 'react-bootstrap'
 interface CardComponentProps {
   variantCard?: string
   header?: string
-  title?: string
-  description?: string
+  title?: string | any
+  description?: string | any
   link?: string
   linkDescription?: string
   variantButton?: string

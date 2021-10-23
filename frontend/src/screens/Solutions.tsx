@@ -2,12 +2,19 @@ import React, { useState } from 'react'
 import MockupMobile from '../components/MockupMobile'
 import axios from 'axios'
 import { Button, Form, Container, Row, Col } from 'react-bootstrap'
+import CardComponent from '../components/CardComponent'
 interface SolutionsProps {}
+
 interface ResponseBody {
-  sms?: any
+  data?: {
+    link?: any
+    sms?: any
+    status?: 'OK' | 'FRAUD'
+  }
   status?: any
   link?: any
   statusText?: any
+  // data?: any
 }
 
 const Solutions: React.FC<SolutionsProps> = () => {
@@ -22,6 +29,7 @@ const Solutions: React.FC<SolutionsProps> = () => {
       `https://778c-185-152-122-218.ngrok.io/sms/{text}?sms=${textMessage}`,
       config
     )
+    //@ts-ignore
     setFetchedData(data)
     console.log(data)
   }
@@ -61,9 +69,18 @@ const Solutions: React.FC<SolutionsProps> = () => {
                     </Form.Group>
                   </Form>
                   <Button onClick={dataHandler}>Sprawdź SMS</Button>
-                  <div className='mt-5'>
-                    Czy jesteś bezpieczny: {fetchedData.statusText}
-                  </div>
+                  {fetchedData.data && fetchedData.data.status === 'OK' && (
+                    <div className='mt-5 text-success'>
+                      Wynik analizy:{' '}
+                      {fetchedData.data && fetchedData.data.status}{' '}
+                    </div>
+                  )}
+                  {fetchedData.data && fetchedData.data.status === 'FRAUD' && (
+                    <div className='mt-5 text-danger'>
+                      Wynik analizy:{' '}
+                      {fetchedData.data && fetchedData.data.status}
+                    </div>
+                  )}
                 </>
               }
             />
