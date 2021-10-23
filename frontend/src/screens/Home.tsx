@@ -1,6 +1,6 @@
 import React from 'react'
-import { LinkContainer } from 'react-router-bootstrap'
-import CardComponent from '../components/CardComponent'
+// import { LinkContainer } from 'react-router-bootstrap'
+// import CardComponent from '../components/CardComponent'
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
