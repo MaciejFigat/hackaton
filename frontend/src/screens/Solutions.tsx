@@ -7,12 +7,20 @@ interface ResponseBody {
   sms?: any
   status?: any
   link?: any
+  statusText?: any
 }
 
 const Solutions: React.FC<SolutionsProps> = () => {
   const dataHandler = async () => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+
     const data = await axios.get(
-      `https://778c-185-152-122-218.ngrok.io/sms/{text}?sms=${textMessage}`
+      `https://778c-185-152-122-218.ngrok.io/sms/{text}?sms=${textMessage}`,
+      config
     )
     setFetchedData(data)
     console.log(data)
@@ -25,11 +33,9 @@ const Solutions: React.FC<SolutionsProps> = () => {
   return (
     <>
       <Container className='mt-5'>
-        <Row className='justify-content-md-center'>
-          <h3>Zweryfikuj treść</h3>
-        </Row>
+        <Row className='justify-content-md-center'></Row>
         <Row className='justify-content-md-center mt-5'>
-          <Col sm={4}>Przykład zastosowania walidacji</Col>
+          <Col sm={4}></Col>
           <Col sm={8}>
             <MockupMobile
               children={
@@ -38,15 +44,12 @@ const Solutions: React.FC<SolutionsProps> = () => {
                     <Form.Group
                       className='mb-3'
                       controlId='exampleForm.ControlInput1'
-                    >
-                      <Form.Label>Email </Form.Label>
-                      <Form.Control type='email' placeholder='are we safe?' />
-                    </Form.Group>
+                    ></Form.Group>
                     <Form.Group
-                      className='mb-3'
+                      className='mb-3 mt-5'
                       controlId='exampleForm.ControlTextarea1'
                     >
-                      <Form.Label>Example textarea</Form.Label>
+                      <Form.Label>Treść badanej wiadomości</Form.Label>
                       <Form.Control
                         as='textarea'
                         rows={9}
@@ -56,7 +59,7 @@ const Solutions: React.FC<SolutionsProps> = () => {
                   </Form>
                   <Button onClick={dataHandler}>Sprawdź SMS</Button>
                   <div className='mt-5'>
-                    Jesteś bezpieczny: {fetchedData.status}
+                    Czy jesteś bezpieczny: {fetchedData.statusText}
                   </div>
                 </>
               }

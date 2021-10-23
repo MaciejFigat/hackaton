@@ -3,6 +3,7 @@ import CardComponent from '../components/CardComponent'
 import { LinkContainer } from 'react-router-bootstrap'
 // import SectionCode from '../components/SectionCode'
 // import { codeExampleOne } from '../codeSnippets/codeOne'
+import Solutions from './Solutions'
 
 interface HomeProps {}
 
@@ -28,6 +29,29 @@ const Home: React.FC<HomeProps> = () => {
           </div>
         </div>
       </section>
+      {/*  */}
+      <section
+        id='partOne'
+        className='bg-dark text-light p-5 p-lg-0 pt-lg-5 h-100 text-center text-sm-start my-3 my-5'
+      >
+        <div className='container'>
+          <div className='d-sm-flex align-items-center justify-content-between'>
+            <div>
+              <h1>
+                <span className='text-danger'>
+                  Przykładowe rozwiązanie problemu - analiza treści{' '}
+                </span>
+              </h1>
+              <p className='lead my-4'>
+                Badamy obecność pod względem obecności szkodliwych linków i
+                załączników.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*  */}
+      <Solutions />
 
       <section
         id='partTwo'
