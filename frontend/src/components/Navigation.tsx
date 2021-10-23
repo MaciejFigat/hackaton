@@ -19,7 +19,7 @@ const Navigation: React.FC<NavProps> = () => {
       <div className='container'>
         {' '}
         <LinkContainer to={'/home'}>
-          <div className='navbar-brand'>!smishing</div>
+          <div className='navbar-brand'>AuthNotIncluded</div>
         </LinkContainer>
         <button className='navbar-toggler' type='button' onClick={menuHandler}>
           <span className='navbar-toggler-icon'></span>
@@ -36,7 +36,7 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/hooks#partOne'
+                  to='/home#partOne'
                   activeClassName='selected'
                 >
                   1
@@ -47,7 +47,7 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/hooks#partOne'
+                  to='/home#partOne'
                   activeClassName='selected'
                 >
                   2
@@ -57,7 +57,7 @@ const Navigation: React.FC<NavProps> = () => {
               <NavDropdown.Item as='button'>
                 <NavHashLink
                   smooth
-                  to='/hooks#partTwo'
+                  to='/home#partThree'
                   activeClassName='selected'
                 >
                   3
@@ -76,7 +76,7 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/props/#basicOne'
+                  to='/about/#partOne'
                   activeClassName='selected'
                 >
                   1
@@ -86,7 +86,7 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/props/#basicFour'
+                  to='/about/#partTwo'
                   activeClassName='selected'
                 >
                   2
@@ -104,7 +104,7 @@ const Navigation: React.FC<NavProps> = () => {
               <NavDropdown.Item as='button'>
                 <NavHashLink
                   smooth
-                  to={'/misc#partOne'}
+                  to={'/solutions#partOne'}
                   activeClassName='selected'
                 >
                   1
@@ -113,7 +113,7 @@ const Navigation: React.FC<NavProps> = () => {
               <NavDropdown.Item as='button'>
                 <NavHashLink
                   smooth
-                  to={'/misc#partThree'}
+                  to={'/solutions#partOne'}
                   activeClassName='selected'
                 >
                   2
@@ -122,7 +122,7 @@ const Navigation: React.FC<NavProps> = () => {
               <NavDropdown.Item as='button'>
                 <NavHashLink
                   smooth
-                  to={'/misc#partFour'}
+                  to={'/solutions#partOne'}
                   activeClassName='selected'
                 >
                   3
