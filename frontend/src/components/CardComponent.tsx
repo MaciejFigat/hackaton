@@ -30,12 +30,16 @@ const CardComponent: React.FC<CardComponentProps> = ({
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
         <Card.Text>{description}</Card.Text>
-        <Button
-          variant={variantButton}
-          style={{ position: 'absolute', bottom: '0.75rem' }}
-        >
-          <a href={link}>{linkDescription}</a>
-        </Button>
+        {linkDescription !== '' ? (
+          <Button
+            variant={variantButton}
+            style={{ position: 'absolute', bottom: '0.75rem' }}
+          >
+            <a href={link}>{linkDescription}</a>
+          </Button>
+        ) : (
+          <></>
+        )}
       </Card.Body>
     </Card>
   )

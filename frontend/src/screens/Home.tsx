@@ -56,7 +56,7 @@ const Home: React.FC<HomeProps> = () => {
               variantCard='light'
               title='Nasze rozwiązanie'
               description='Proponujemy ...'
-              link=''
+              link='/about/#partOne'
               linkDescription='Architektura rozwiązania'
               variantButton='primary'
             />
@@ -82,6 +82,24 @@ const Home: React.FC<HomeProps> = () => {
                 </span>{' '}
               </h2>
             </div>
+
+            <CardComponent
+              variantCard='success'
+              title='Budowanie zaufania'
+              description='Korzystne będzie budowanie wzajemnego zaufania.'
+              link=''
+              linkDescription=''
+              variantButton='danger'
+            />
+
+            <CardComponent
+              variantCard='primary'
+              title='Przeciwdziałanie obojętności'
+              description='Strach przed oszustwem, błędne praktyki i zaniedbania powodują wzrastającą obojętność klienta.'
+              link=''
+              linkDescription=''
+              variantButton='warning'
+            />
           </div>
         </div>
       </section>
