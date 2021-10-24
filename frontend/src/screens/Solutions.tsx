@@ -47,6 +47,7 @@ const Solutions: React.FC<SolutionsProps> = () => {
           <Col sm={4}></Col>
           <Col sm={8}>
             <MockupMobile
+              version={'galaxy-s8'}
               children={
                 <>
                   <Form className='mt-5'>

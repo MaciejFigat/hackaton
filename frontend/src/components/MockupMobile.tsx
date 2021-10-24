@@ -1,11 +1,38 @@
 import React from 'react'
 import { useStyletron } from 'baseui'
-interface MockupMobileProps {}
+interface MockupMobileProps {
+  version?:
+    | 'ipad-pro'
+    | 'iphone-x'
+    | 'apple-watch'
+    | 'imac-pro'
+    | 'surface-studio'
+    | 'macbook.device-spacegray'
+    | 'macbook.device-rosegold'
+    | 'macbook.device-gold'
+    | 'macbook'
+    | 'macbook-pro'
+    | 'surface-book'
+    | 'ipad-pro.device-spacegray'
+    | 'ipad-pro.device-rosegold'
+    | 'ipad-pro.device-gold'
+    | 'ipad-pro'
+    | 'galaxy-s8.device-blue'
+    | 'galaxy-s8'
+    | 'google-pixel.device-blue'
+    | 'google-pixel.device-black'
+    | 'google-pixel'
+    | 'iphone-8.device-spacegray'
+    | 'iphone-8.device-gold'
+    | 'iphone-8'
 
-const MockupMobile: React.FC<MockupMobileProps> = ({ children }) => {
+  children: React.ReactNode
+}
+// ipad-pro iphone-x
+const MockupMobile: React.FC<MockupMobileProps> = ({ children, version }) => {
   const [css] = useStyletron()
   return (
-    <div className='device device-iphone-x'>
+    <div className={`device device-${version}`}>
       <div className='device-frame'>
         <div
           className={css({
