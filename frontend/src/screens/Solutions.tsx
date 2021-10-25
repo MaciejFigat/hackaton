@@ -96,6 +96,47 @@ const Solutions: React.FC<SolutionsProps> = () => {
           </Col>
         </Row>
       </Container>
+      <Container>
+        <Row className='justify-content-md-center mt-2'>
+          {' '}
+          <MockupMobile
+            version={'macbook'}
+            children={
+              <>
+                <Form className='mt-2'>
+                  <Form.Group
+                    className='mb-3'
+                    controlId='exampleForm.ControlInput1'
+                  ></Form.Group>
+                  <Form.Group
+                    className='mb-3 mt-5'
+                    controlId='exampleForm.ControlTextarea1'
+                  >
+                    <Form.Label>Treść badanej wiadomości</Form.Label>
+                    <Form.Control
+                      as='textarea'
+                      rows={4}
+                      placeholder='I am sorry but our backend functionality is offline. Hire Maciej to build one for You!'
+                      onChange={(e: any) => setTextMessage(e.target.value)}
+                    />
+                  </Form.Group>
+                </Form>
+                <Button onClick={dataHandler}>Sprawdź SMS</Button>
+                <div className='mt-5'>
+                  Proponujemy byś przeczytał:
+                  <a
+                    href='https://niebezpiecznik.pl/post/sa-propozycje-regulacji-przeciwko-wyludzeniom-kart-sim/'
+                    className='text-info'
+                  >
+                    {' '}
+                    niebezpiecznik.pl
+                  </a>
+                </div>
+              </>
+            }
+          />
+        </Row>
+      </Container>
     </>
   )
 }

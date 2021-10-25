@@ -26,7 +26,7 @@ interface MockupMobileProps {
     | 'iphone-8.device-gold'
     | 'iphone-8'
 
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 // ipad-pro iphone-x
 const MockupMobile: React.FC<MockupMobileProps> = ({ children, version }) => {
