@@ -1,3 +1,5 @@
+// to forward, whatever query parameters passed, to our server - to public url endpoint
+const url = require('url')
 const express = require('express')
 const router = express.Router()
 const needle = require('needle')
@@ -10,17 +12,24 @@ const API_QUERY = process.env.API_QUERY
 // needle returns a promis, hence it should be an async function
 router.get('/', async (req, res) => {
   try {
-    // console.log(url.parse(req.url, true).query)
     const params = new URLSearchParams({
       [API_KEY_NAME]: API_KEY_VALUE,
+      // this adds the query parameters to public Api url endpoint
+      ...url.parse(req.url, true).query,
     })
     // so I can use ${params} instead of ${API_KEY_NAME}=${API_KEY_VALUE}
 
     const apiResponse = await needle(
       'get',
-      `${API_URL}current?${params}&query=Warsaw`
+      `${API_URL}current?${params}`
+      // `${API_URL}current?${params}&query=Warsaw`
     )
     const data = apiResponse.body
+    // it will log the request to public API when im in development
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`REQUEST: ${API_URL}?${params}`)
+    }
+
     res.status(200).json(data)
   } catch (error) {
     res.status(500).json({ error })
