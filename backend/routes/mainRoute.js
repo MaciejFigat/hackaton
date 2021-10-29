@@ -3,14 +3,20 @@ const url = require('url')
 const express = require('express')
 const router = express.Router()
 const needle = require('needle')
+const apicache = require('apicache')
+
+// env variables
 
 const API_KEY_VALUE = process.env.API_KEY_VALUE
 const API_KEY_NAME = process.env.API_KEY_NAME
 const API_URL = process.env.API_URL
 const API_QUERY = process.env.API_QUERY
 
+//  initializing the cache - added cache in router.get as 2nd argument
+let cache = apicache.middleware
+
 // needle returns a promis, hence it should be an async function
-router.get('/', async (req, res) => {
+router.get('/', cache('3 minutes'), async (req, res) => {
   try {
     const params = new URLSearchParams({
       [API_KEY_NAME]: API_KEY_VALUE,
