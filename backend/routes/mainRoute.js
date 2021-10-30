@@ -1,15 +1,15 @@
 // to forward, whatever query parameters passed, to our server - to public url endpoint
-// const url = require('url')
 import url from 'url'
-// const express = require('express')
 import express from 'express'
 import needle from 'needle'
+import dotenv from 'dotenv'
 import apicache from 'apicache'
+
 const router = express.Router()
-// const needle = require('needle')
+
+dotenv.config()
 
 // env variables
-
 const API_KEY_VALUE = process.env.API_KEY_VALUE
 const API_KEY_NAME = process.env.API_KEY_NAME
 const API_URL = process.env.API_URL
@@ -28,12 +28,10 @@ router.get('/', cache('3 minutes'), async (req, res) => {
     })
     // so I can use ${params} instead of ${API_KEY_NAME}=${API_KEY_VALUE}
 
-    const apiResponse = await needle(
-      'get',
-      `${API_URL}current?${params}`
-      // `${API_URL}current?${params}&query=Warsaw`
-    )
+    const apiResponse = await needle('get', `${API_URL}current?${params}`)
+
     const data = apiResponse.body
+
     // it will log the request to public API when im in development
     if (process.env.NODE_ENV !== 'production') {
       console.log(`REQUEST: ${API_URL}?${params}`)
@@ -45,11 +43,4 @@ router.get('/', cache('3 minutes'), async (req, res) => {
   }
 })
 
-// `${API_URL}current?${params}&query=Warsaw`
-// `${API_URL}current?access_key=${API_KEY_VALUE}${params}`
-// http://api.weatherstack.com/current
-//     ? access_key = API_KEY_VALUE
-//     & query = New York
-
-// module.exports = router
 export default router
