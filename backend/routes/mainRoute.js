@@ -7,8 +7,6 @@ import needle from 'needle'
 import apicache from 'apicache'
 const router = express.Router()
 // const needle = require('needle')
-const needle = needle()
-const apicache = apicache()
 
 // env variables
 

@@ -6,7 +6,7 @@ import cors from 'cors'
 import rateLimit from 'express-rate-limit'
 import dotenv from 'dotenv'
 // require('dotenv').config()
-import mainRoute from './routes/mainRoute'
+import mainRoute from './routes/mainRoute.js'
 
 dotenv.config()
 
