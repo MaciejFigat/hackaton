@@ -1,7 +1,14 @@
-const express = require('express')
-const cors = require('cors')
-const rateLimit = require('express-rate-limit')
-require('dotenv').config()
+// const express = require('express')
+import express from 'express'
+// const cors = require('cors')
+import cors from 'cors'
+// const rateLimit = require('express-rate-limit')
+import rateLimit from 'express-rate-limit'
+import dotenv from 'dotenv'
+// require('dotenv').config()
+import mainRoute from './routes/mainRoute'
+
+dotenv.config()
 
 const PORT = process.env.PORT || 5000
 
@@ -21,7 +28,7 @@ app.set('trust proxy', 1)
 app.use(express.static('./backend/public'))
 
 // Routes
-app.use('/api', require('./routes/mainRoute'))
+app.use('/api', mainRoute)
 
 // cors - enable
 app.use(cors())

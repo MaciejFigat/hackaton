@@ -1,9 +1,14 @@
 // to forward, whatever query parameters passed, to our server - to public url endpoint
-const url = require('url')
-const express = require('express')
+// const url = require('url')
+import url from 'url'
+// const express = require('express')
+import express from 'express'
+import needle from 'needle'
+import apicache from 'apicache'
 const router = express.Router()
-const needle = require('needle')
-const apicache = require('apicache')
+// const needle = require('needle')
+const needle = needle()
+const apicache = apicache()
 
 // env variables
 
@@ -48,4 +53,5 @@ router.get('/', cache('3 minutes'), async (req, res) => {
 //     ? access_key = API_KEY_VALUE
 //     & query = New York
 
-module.exports = router
+// module.exports = router
+export default router

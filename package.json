@@ -1,8 +1,9 @@
 {
   "name": "hackaton",
   "version": "1.0.0",
-  "description": "*** Documentation of the proposal to fixing SMS vulnerabilities as pertaining to smishing practices ***",
-  "main": "index.js",
+  "description": "Documentation of the proposal to fixing SMS vulnerabilities as pertaining to smishing practices",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node backend/server",
     "dev": "nodemon backend/server"
