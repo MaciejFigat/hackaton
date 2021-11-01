@@ -18,13 +18,63 @@ const Home: React.FC<HomeProps> = () => {
           <div className='d-sm-flex align-items-center justify-content-between'>
             <div>
               <h1>
-                <span className='text-info'>Smishing </span>SMS phishing{' '}
-                <span className='text-success'>analiza problemu</span>
+                <span className='text-danger'>Stop </span>SMS phishing{' '}
               </h1>
-              <p className='lead my-4'>
-                Naszym celem jest zwiększenie sprawności i utrzymanie stabilnej
-                platformy komunikacyjnej między klientem a użytkownikiem.
-              </p>
+              <div className='card border-warning mb-3'>
+                <div className='card-header'>
+                  {' '}
+                  <span className='text-success lead'>
+                    Cybersecurity in your mobile
+                  </span>
+                </div>
+                <div className='card-body'>
+                  <h4 className='card-title'>Lorem, ipsum dolor.</h4>
+                  <p className='card-text'>
+                    Naszym celem jest zwiększenie sprawności i utrzymanie
+                    bezpiecznej platformy komunikacyjnej między klientem a
+                    użytkownikiem.
+                  </p>
+                </div>
+              </div>
+
+              <h1>
+                <span className='text'>
+                  Problemami jakie chcemy zaadresować są:{' '}
+                </span>
+              </h1>
+
+              <div className='card border-warning mb-3'>
+                <div className='card-header'>
+                  {' '}
+                  <span className='text-warning lead my-4'>
+                    Fałszywe wiadomości SMS
+                  </span>
+                </div>
+                <div className='card-body'>
+                  <h4 className='card-title'>Lorem, ipsum dolor.</h4>
+                  <p className='card-text'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Veniam delectus accusamus tenetur animi consequatur
+                    deleniti!
+                  </p>
+                </div>
+              </div>
+              <div className='card border-info mb-3'>
+                <div className='card-header'>
+                  {' '}
+                  <span className='text-info lead my-4'>
+                    Autoryzacja bankowych połączeń telefonicznych
+                  </span>
+                </div>
+                <div className='card-body'>
+                  <h4 className='card-title'>Lorem, ipsum dolor.</h4>
+                  <p className='card-text'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Veniam delectus accusamus tenetur animi consequatur
+                    deleniti!
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -39,12 +89,12 @@ const Home: React.FC<HomeProps> = () => {
             <div>
               <h1>
                 <span className='text-danger'>
-                  Przykładowe rozwiązanie problemu - analiza treści{' '}
+                  Przykładowe rozwiązanie problemu - analiza treści SMS
                 </span>
               </h1>
               <p className='lead my-4'>
-                Badamy obecność pod względem obecności szkodliwych linków i
-                załączników.
+                Badamy wiadomość pod względem obecności szkodliwych linków i
+                podejrzanych treści.
               </p>
             </div>
           </div>

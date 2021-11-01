@@ -36,10 +36,10 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/home#partOne'
+                  to='/vectors#partOne'
                   activeClassName='selected'
                 >
-                  1
+                  Technologia
                 </NavHashLink>
               </NavDropdown.Item>
 
@@ -47,20 +47,20 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/home#partOne'
+                  to='/vectors#partTwo'
                   activeClassName='selected'
                 >
-                  2
+                  Psychologia
                 </NavHashLink>
               </NavDropdown.Item>
 
               <NavDropdown.Item as='button'>
                 <NavHashLink
                   smooth
-                  to='/home#partThree'
+                  to='/vectors#partThree'
                   activeClassName='selected'
                 >
-                  3
+                  Zaufanie
                 </NavHashLink>
               </NavDropdown.Item>
             </NavDropdown>
