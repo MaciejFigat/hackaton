@@ -37,11 +37,9 @@ const Home: React.FC<HomeProps> = () => {
                 </div>
               </div>
 
-              <h1>
-                <span className='text'>
-                  Problemami jakie chcemy zaadresować są:{' '}
-                </span>
-              </h1>
+              <h2>
+                <span className='text'>Chcemy zaadresować dwa problemy </span>
+              </h2>
 
               <div className='card border-warning mb-3'>
                 <div className='card-header'>
