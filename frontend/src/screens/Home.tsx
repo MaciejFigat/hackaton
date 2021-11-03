@@ -36,42 +36,43 @@ const Home: React.FC<HomeProps> = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className='container'>
+          <div className='d-sm-flex align-items-center justify-content-between'>
+            <h2>
+              <span className='text'>Chcemy zaadresować dwa problemy </span>
+            </h2>
 
-              <h2>
-                <span className='text'>Chcemy zaadresować dwa problemy </span>
-              </h2>
-
-              <div className='card border-warning mb-3'>
-                <div className='card-header'>
-                  {' '}
-                  <span className='text-warning lead my-4'>
-                    Fałszywe wiadomości SMS
-                  </span>
-                </div>
-                <div className='card-body'>
-                  <h4 className='card-title'>Lorem, ipsum dolor.</h4>
-                  <p className='card-text'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Veniam delectus accusamus tenetur animi consequatur
-                    deleniti!
-                  </p>
-                </div>
+            <div className='card border-warning mb-3'>
+              <div className='card-header'>
+                {' '}
+                <span className='text-warning lead my-4'>
+                  Fałszywe wiadomości SMS
+                </span>
               </div>
-              <div className='card border-info mb-3'>
-                <div className='card-header'>
-                  {' '}
-                  <span className='text-info lead my-4'>
-                    Autoryzacja bankowych połączeń telefonicznych
-                  </span>
-                </div>
-                <div className='card-body'>
-                  <h4 className='card-title'>Lorem, ipsum dolor.</h4>
-                  <p className='card-text'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Veniam delectus accusamus tenetur animi consequatur
-                    deleniti!
-                  </p>
-                </div>
+              <div className='card-body'>
+                <h4 className='card-title'>Lorem, ipsum dolor.</h4>
+                <p className='card-text'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam delectus accusamus tenetur animi consequatur deleniti!
+                </p>
+              </div>
+            </div>
+            <div className='card border-info mb-3'>
+              <div className='card-header'>
+                {' '}
+                <span className='text-info lead my-4'>
+                  Autoryzacja bankowych połączeń telefonicznych
+                </span>
+              </div>
+              <div className='card-body'>
+                <h4 className='card-title'>Lorem, ipsum dolor.</h4>
+                <p className='card-text'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam delectus accusamus tenetur animi consequatur deleniti!
+                </p>
               </div>
             </div>
           </div>
@@ -79,7 +80,7 @@ const Home: React.FC<HomeProps> = () => {
       </section>
       {/*  */}
       <section
-        id='partOne'
+        id='partTwo'
         className='bg-dark text-light p-5 p-lg-0 pt-lg-5 h-100 text-center text-sm-start my-3 my-5'
       >
         <div className='container'>
@@ -90,10 +91,21 @@ const Home: React.FC<HomeProps> = () => {
                   Przykładowe rozwiązanie problemu - analiza treści SMS
                 </span>
               </h1>
-              <p className='lead my-4'>
-                Badamy wiadomość pod względem obecności szkodliwych linków i
-                podejrzanych treści.
-              </p>
+            </div>
+            <div className='card border-success mb-3'>
+              <div className='card-header'>
+                {' '}
+                <span className='text-success lead my-4'>
+                  Dodatkowa warstwa zabezpieczeń przed phishingiem
+                </span>
+              </div>
+              <div className='card-body'>
+                <h4 className='card-title'>Analiza treści</h4>
+                <p className='card-text lead'>
+                  Badamy wiadomość pod względem obecności szkodliwych linków i
+                  podejrzanych treści.
+                </p>
+              </div>
             </div>
           </div>
         </div>
